@@ -5,14 +5,14 @@ boolean rainbow = true;
 float angleIncrement = 0;
 
 
-void setup() 
-{
+void setup() {
+
   size(1000, 700);
 
 }
 
-void draw()
-{
+void draw() {
+
   background(33);
   
   textSize(18); 
@@ -21,9 +21,11 @@ void draw()
   translate(width/2, height - 50);
   makeBranch(startLength);
   a += angleIncrement;
+
 }
 
 void makeBranch(float len) {
+
   if (len < 3) {
     return;
   }
@@ -55,10 +57,7 @@ void makeBranch(float len) {
     makeBranch(len * lengthReduction);
   pop();
   
-  
-  
 }
-
 
 void keyPressed() {
   // rainbow on / off
